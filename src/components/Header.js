@@ -1,22 +1,33 @@
 import React from 'react'
-
-import Footer from './Footer'
-import avatar from '../assets/images/avatar.jpg'
-
-class Header extends React.Component {
-    render() {
-        return (
-            <header id="header">
-                <div className="inner">
-                    <a href="#" className="image avatar"><img src={avatar} alt="" /></a>
-                    <h1><strong>I am Strata</strong>, a super simple<br />
-                    responsive site template freebie<br />
-                    crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1>
+import logo from '../assets/img/logo-white.png';
+const Header = () =>
+<header>
+    <div className="header-area">
+        <div className="container">
+            <div className="row align-items-center">
+                <div className="col-md-3 col-sm-12">
+                    <div className="logo">
+                        <a href="index.html"><img src={logo} alt="Paty Bradley Hairstyles Logo" /></a>
+                    </div>
                 </div>
-                <Footer />
-            </header>
-        )
-    }
-}
+                <div className="col-md-9 d-none d-md-block">
+                    <div className="main-menu">
+                        <nav className="nav-menu">
+                            <ul id="nav_menu">
+                                <li className="active"><a data-hover="home" href="#home"><span>Home</span></a></li>
+                                <li><a data-hover="about" href="#about"><span>About</span></a></li>
+                                <li><a data-hover="portfolio" href="#portfolio"><span>Portfolio</span></a></li>
+                                <li><a data-hover="contact" href="#contact"><span>Contact</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div className="col-sm-12 d-block d-md-none">
+                    <div className="responsive-menu-wrap"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>;
 
-export default Header
+export default Header;
